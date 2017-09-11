@@ -6,11 +6,11 @@
     <title>Wordlase demo</title>
     <style>
       body { margin: 0px; color: #3f3e43; background-color: #e3f5ff;  }
-      .emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
-      textarea.emscripten { font-family: monospace; width: 80%; }
-      div.emscripten { text-align: center; }
+      .dxpe { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
+      textarea.dxpe { font-family: monospace; width: 80%; }
+      div.dxpe { text-align: center; }
       /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
-      canvas.emscripten { border: 0px none; background-color: #e3f5ff; }
+      canvas.dxpe { border: 0px none; background-color: #e3f5ff; }
 
       .spinner {
         height: 50px;
@@ -48,15 +48,15 @@
   </head>
   <body>
     <figure style="overflow:visible;" id="spinner"><div class="spinner"></div><center style="margin-top:0.5em"><h3>Wordlase Demo</h3></center></figure>
-    <div class="emscripten" id="status">Downloading...</div>
-    <div class="emscripten">
+    <div class="dxpe" id="status">Downloading...</div>
+    <div class="dxpe">
       <progress value="0" max="100" id="progress" hidden=1></progress>  
     </div>
-    <div class="emscripten_border">
-      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    <div class="dxpe_border">
+      <canvas class="dxpe" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
     </div>
 
-    <div style="display: none" class="emscripten">
+    <div style="display: none" class="dxpe">
       <input type="checkbox" id="resize">Resize canvas
       <input type="checkbox" id="pointerLock">Lock/hide mouse pointer
       &nbsp;&nbsp;&nbsp;
@@ -64,7 +64,7 @@
                                                                                 document.getElementById('resize').checked)">
     </div>
     
-    <textarea style="display: none" class="emscripten" id="output" rows="8"></textarea>
+    <textarea style="display: none" class="dxpe" id="output" rows="8"></textarea>
     <script type='text/javascript'>
       var statusElement = document.getElementById('status');
       var progressElement = document.getElementById('progress');
